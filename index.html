@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#041a33" />
+    <meta name="description" content="特别委托：晨昏线，迎接宝宝，深海大冒险。" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="晨昏线 · 迎接宝宝特别委托" />
+    <meta property="og:description" content="特别委托：晨昏线，你的潜水员队友已就位。吃好喝好，等宝宝登场！" />
+    <meta property="og:image" content="./assets/wedding-invitation-logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="晨昏线 · 迎接宝宝特别委托" />
+    <meta name="twitter:description" content="特别委托：晨昏线，你的潜水员队友已就位。吃好喝好，等宝宝登场！" />
+    <meta name="twitter:image" content="./assets/wedding-invitation-logo.png" />
+    <title>晨昏线 · 迎接宝宝特别委托</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script type="module" src="./app.js"></script>
+  </head>
+  <body>
+    <main class="phone-shell">
+      <section class="hero" id="top">
+        <img class="hero-art" src="./assets/dave-key-art-clean.png" alt="蓝洞海面场景" />
+        <div class="hero-shade"></div><div class="surface-glitter" aria-hidden="true"></div>
+        <div class="hero-hud"><span>BLUE HOLE</span><b>NEW WORLD</b><span>QUEST 01</span></div>
+        <div class="hero-brand">
+          <h1><span class="name-word">晨昏线</span><span class="name-divider">♥</span><span class="name-word">硫酸盐</span></h1>
+        </div>
+        <div class="hero-copy">
+          <p class="mission-code">SPECIAL MISSION · BABY IS COMING</p>
+          <h2 class="hero-cn-name">迎接宝宝</h2>
+          <p class="hero-en-name"><b>SPECIAL</b><i>•</i><b>QUEST</b><i>•</i><b>NOW</b></p>
+          <div class="mission-ticket"><span>TEAM</span><b>晨昏线 &amp; 硫酸盐</b><span>STATUS</span><b class="hero-venue">宝宝准备中 · 随时可能登场</b></div>
+        </div>
+        <button class="dive-button" id="start-mission" type="button"><span>点击开始，潜入新世界</span><b>▶</b></button>
+        <p class="start-note">建议开启声音体验 · 点击后播放官方 OST</p>
+      </section>
+
+      <div class="game-hud" aria-hidden="true">
+        <div class="depth"><small>DEPTH</small><b id="depth-value">0</b><span>M</span></div>
+        <div class="oxygen"><span>O₂</span><i><b id="oxygen-fill"></b></i></div>
+        <div class="caught"><span>🐟</span><b id="fish-count">0</b><small>/ 5</small></div>
+      </div>
+
+      <section class="underwater story-section" id="briefing">
+        <div class="water-rays" aria-hidden="true"></div><div class="bubble-field" aria-hidden="true"></div>
+        <header class="section-title reveal"><span>!</span><div><p>NEW MISSION RECEIVED</p><h2>迎接宝宝特别委托</h2></div></header>
+        <article class="mission-card reveal">
+          <div class="card-top"><span>BABY QUEST</span><b id="quest-status">NEW</b></div>
+          <h3>宝宝的登场预告</h3>
+          <p>亲爱的晨昏线：你最近在做一件全服最了不起的事——给这个世界带来一个新玩家。不用紧张，也不用赶时间，宝宝准备好了自然会来。我们都在你身边。</p>
+          <dl><div><dt>TEAM</dt><dd>晨昏线 &amp; 硫酸盐</dd></div><div><dt>STATUS</dt><dd class="venue-one-line">宝宝准备中 · 随时可能登场</dd></div><div><dt>TIP</dt><dd>深呼吸 · 听音乐 · 老公随叫随到</dd></div></dl>
+          <button class="accept-button" id="accept-quest" type="button">长按接受委托</button><div class="hold-progress" aria-hidden="true"><i></i></div>
+        </article>
+        <div class="mission-complete" id="mission-complete" role="status" aria-live="polite"><b>委托已接受</b><span>全队已就位 · 随时出发！</span></div>
+        <div class="exploration-frame reveal">
+          <img src="./assets/sea-exploration.webp" alt="潜水员戴夫海底探索动画" /><div class="camera-corners" aria-hidden="true"></div>
+          <button class="sonar-button" id="sonar-button" type="button" aria-label="释放声呐">SONAR</button><div class="sonar-field" aria-hidden="true"></div>
+        </div>
+        <p class="scene-caption reveal fish-caption">点击小鱼，收取专属祝福 <b class="fish-arrow" aria-hidden="true">↓</b><small>全服独一份</small></p><div class="fish-field" id="fish-field" aria-label="可以捕捉的像素鱼"></div>
+      </section>
+
+      <section class="crew-section story-section" id="crew">
+        <header class="section-title reveal"><span>02</span><div><p>CREW COMMUNICATION</p><h2>蓝洞小队来电</h2></div></header>
+        <div class="crew-phone reveal">
+          <div class="phone-top"><span>iDIVER</span><b>INCOMING CALL</b></div>
+          <div class="crew-slides" id="crew-slides">
+            <article class="crew-slide is-active" data-name="DAVE"><img src="./assets/dave-character.webp" alt="潜水员戴夫角色介绍" /><p><b>DAVE</b>“听说这次不是抓鱼，是去接一个会哭会闹会抢手机的小玩家？行，鱼我帮你看着，你先去通关！”</p></article>
+            <article class="crew-slide" data-name="BANCHO"><img src="./assets/bancho.webp" alt="班乔角色介绍" /><p><b>BANCHO</b>“晨昏线小姐，打完这个副本，本店新菜——月子餐，管够，无限供应！”</p></article>
+            <article class="crew-slide" data-name="COBRA"><img src="./assets/cobra.webp" alt="柯布拉角色介绍" /><p><b>COBRA</b>“船已备好——啊不，产房已备好！到时候全队集合，谁都不许迟到！”</p></article>
+            <article class="crew-slide" data-name="BACON"><img src="./assets/bacon.webp" alt="培根博士角色介绍" /><p><b>DR. BACON</b>“根据研究：新玩家加入后，家里会多出很多笑声和热闹，幸福指数 +200%。请做好被可爱包围的准备。” </p></article>
+          </div>
+          <div class="crew-controls"><button type="button" data-crew="prev">◀</button><output id="crew-name">DAVE · 1/4</output><button type="button" data-crew="next">▶</button></div>
+        </div>
+      </section>
+
+      <section class="schedule-section story-section" id="schedule">
+        <header class="section-title light reveal"><span>03</span><div><p>PRE-BABY HAPPY LIST</p><h2>生娃前 · 快乐清单</h2></div></header>
+        <div class="restaurant-screen reveal"><img src="./assets/sushi-service.webp" alt="班乔寿司店营业动画" /><div class="restaurant-status"><i></i><span>OPEN FOR HAPPY</span></div></div>
+        <div class="menu-board reveal">
+          <p class="board-title">TODAY'S HAPPY LIST</p>
+          <article><time>🍲</time><div><b>吃顿火锅</b><span>想吃的都安排上 · 微辣中辣特辣随你</span></div><strong>★</strong></article>
+          <article><time>🧋</time><div><b>喝杯奶茶</b><span>全糖去冰 · 老公请客 · 管够</span></div><strong>★★</strong></article>
+          <article><time>🎬</time><div><b>看场电影</b><span>你选片 · 我买爆米花 · 看到打烊</span></div><strong>★★★</strong></article>
+          <article><time>🎮</time><div><b>打打游戏</b><span>戴夫代练已上线 · 陪玩陪聊陪逛街</span></div><strong>★★★</strong></article>
+          <div class="menu-total"><span>HAPPY POINT</span><b>MAX</b></div>
+        </div>
+        <div class="countdown-card reveal"><span>宝宝加载中</span><b>99%</b><small>LOADING…</small></div>
+      </section>
+
+      <section class="arrival story-section" id="arrival">
+        <header class="section-title reveal"><span>04</span><div><p>HAPPY RADAR · FOOD HUNT</p><h2>觅食雷达</h2></div></header>
+        <article class="map-console reveal">
+          <div class="map-grid" aria-hidden="true"></div><div class="map-pulse" aria-hidden="true"><i></i><b>♥</b></div>
+          <p class="coordinate">HAPPY RADAR · ACTIVE</p>
+          <h3>家 · 医院 · 火锅店 三点一线</h3>
+          <p>雷达已开启：生娃前，把所有想吃的都安排上 · 坐标随时更新</p>
+          <a href="https://ditu.amap.com/" rel="noreferrer">打开高德地图 · 搜好吃的 <span>↗</span></a>
+        </article>
+      </section>
+
+      <section class="rsvp-section story-section" id="rsvp">
+        <header class="section-title reveal"><span>05</span><div><p>BABY ORACLE · PREDICTION</p><h2>宝宝预言面板</h2></div></header>
+        <div class="rsvp-phone reveal">
+          <div class="app-bar"><span>◉</span><b>BABY ORACLE</b><small>ONLINE</small></div>
+          <form id="rsvp-form" novalidate>
+            <p class="demo-notice">预言模式 · 内容只保存在这台手机，不会外传</p>
+            <label><span>你猜宝宝几点来报到</span><input name="birthGuess" type="datetime-local" /></label>
+            <label><span>猜猜几斤几两</span><input name="weightGuess" type="number" min="0" max="10" step="0.1" placeholder="比如 6.6 斤" /></label>
+            <label><span>宝宝更像谁</span><select name="looksLike"><option value="">不好说，生出来才知道</option><option value="mama">像妈妈（废话）</option><option value="baba">像爸爸（他最好看）</option><option value="both">雨露均沾</option></select></label>
+            <label><span>想对宝宝说的第一句话</span><textarea name="babyMessage" maxlength="200" rows="4" placeholder="写一句吧（选填）"></textarea><small><output id="message-count">0</output>/200</small></label>
+            <p class="form-error" id="rsvp-error" role="alert" hidden></p><button class="submit-button" type="submit"><span>保存预言</span><b>▶</b></button>
+          </form>
+          <div class="rsvp-success" id="rsvp-success" tabindex="-1" hidden><div class="success-radar"><i></i><b>✓</b></div><h3 id="rsvp-success-title">预言已存档</h3><p id="rsvp-success-summary"></p><button id="rsvp-edit" type="button">重新预言</button></div>
+        </div>
+      </section>
+
+      <section class="ending story-section"><img src="./assets/dave-dive.webp" alt="蓝洞海底场景" /><div class="ending-copy reveal"><p>COMING SOON</p><h2>最好的礼物<br />正在赶来的路上</h2><b>晨昏线 &amp; 硫酸盐 &amp; 小海星</b><span>等你官宣 · 全家团圆</span></div></section>
+      <footer><p>FOR 晨昏线 · FROM 硫酸盐 · FAN-MADE DEMO</p></footer>
+    </main>
+
+    <nav class="quick-nav" aria-label="快捷导航"><a href="#briefing">任务</a><a href="#schedule">清单</a><a href="#arrival">雷达</a><a href="#rsvp">预言</a></nav>
+    <div class="music-dock">
+      <audio id="official-bgm" preload="metadata" loop playsinline src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/81/7c/fc/817cfcb4-e07a-c9ee-21cc-2fe61ff00906/mzaf_12705664676681936623.plus.aac.p.m4a"></audio>
+      <p id="music-hint">点击播放/关闭官方音乐</p><button id="music-toggle" type="button" aria-pressed="false" aria-label="播放官方背景音乐"><span>♫</span></button>
+    </div>
+  </body>
+</html>
